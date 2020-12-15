@@ -1,0 +1,72 @@
+.main {
+        background-image: url("back_ground.jpg");
+        height: 100%; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1400px 650px;
+}
+a {
+    color: white;
+    font-size: 20px;
+}
+h3{
+    position: absolute;
+    right: 500;
+    top: 240px;
+    width: 200px;
+    color: white;
+}
+h4{
+    background-color: grey;
+     width: auto;
+}
+.box-left{
+    width: 450px;
+    height: 300px;
+    position: relative;
+}
+.box-left img{
+    width: 100%;
+    left:20px;
+}
+.box-right{
+    width: 150px;
+    height: 100px;
+    position: relative;
+}
+.box-right img{
+    width: 100%;
+    left:1200px;
+    top: -370px;
+}
+img,p{
+    position: absolute;
+}
+.atasKiri{
+    top: 200px;
+    left: 170px;
+    font-size: 30px;
+}
+.bawahKanan{
+    position: absolute;
+    right: 0;
+    top: 440px;
+    width: 200px;
+
+}
+.atasLogin{
+    position: absolute;
+    right: 125;
+    top: 200px;
+    width: 200px;
+
+}
+.box-2{
+    position: absolute;
+    font-size: 100px;
+    right: 100;
+    top: 240px;
+    width: 200px;
+    border: darkolivegreen;
+
+}
