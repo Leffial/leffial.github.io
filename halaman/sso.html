@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="google-signin-client_id"
+        content="5365813985-7drt4l5vsiviguppjfhlmhn4svlk5eh4.apps.googleusercontent.com">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/font.css" />
+    <link type="text/css" rel="stylesheet" href="css/sso.css" />
+    <title>Register/title</title>
+
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script>
+        var googleUser = {};
+        var startApp = function () {
+            gapi.load('auth2', function () {
+                // Retrieve the singleton for the GoogleAuth library and set up the client.
+                auth2 = gapi.auth2.init({
+                    client_id: '5365813985-7drt4l5vsiviguppjfhlmhn4svlk5eh4.apps.googleusercontent.com',
+                    cookiepolicy: 'single_host_origin',
+                    // Request scopes in addition to 'profile' and 'email'
+                    //scope: 'additional_scope'
+                });
+                attachSignin(document.getElementById('google'));
+            });
+        };
+
+        function attachSignin(element) {
+            console.log(element.id);
+            auth2.attachClickHandler(element, {},
+                function (googleUser) {
+                    sessionStorage.setItem("name",googleUser.getBasicProfile().getName());
+                    window.location.href = "register.html";
+                    //document.getElementById('name').innerText = "Signed in: " +
+                        //googleUser.getBasicProfile().getName();
+                }, function (error) {
+                    alert(JSON.stringify(error, undefined, 2));
+                });
+        }
+    </script>
+</head>
+
+<body class="main2">
+    <div class="container valign-wrapper2">
+        <div class="row center-align">
+            <div class="card z-depth-3">
+                <div class="card-content">
+                    <p style="margin-top: 20px; margin-bottom: 25px; font-size: 35px;">Registration
+                    </p>
+                    <p><a href="#" id="google"><span><img src="img/google.png" width="50px" style="margin-right: 15px;">
+                                Register with
+                                Google</span></a></p>
+                    <div id="name"></div>
+                    <script>startApp();</script>
+
+                    <p><a href="/register.html"><span><img src="img/facebook.png" width="50px"
+                                    style="margin-right: 15px;"> Register
+                                with
+                                Facebook</span></p>
+                    </p>
+                    <p><a href="/register.html"><span><img src="img/twitter.png" width="50px"
+                                    style="margin-right: 15px;"> Register with
+                                Twitter</span></a></p>
+                    <p><a href="/register.html"><span><img src="img/github.png" width="50px"
+                                    style="margin-right: 15px;"> Register with
+                                Github</span></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>

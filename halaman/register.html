@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Custom styles for this template-->
+    <link href="css/register.css" rel="stylesheet">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="black">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h4 style=" color:white; margin: 25px 0px;">Registration Form</h4>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="input-field">
+                                <input value="" id="username" type="text" class="validate" required>
+                                <label for="username">Username</label>
+                            </div>
+                            <div class="input-field">
+                                <input onkeyup="checkStrengthPwd()" placeholder="Password" id="password" type="password"
+                                    required>
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password">
+                                <label>Confirm Password</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text">
+                                <label>Full Name</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="number">
+                                <label>NIK</label>
+                            </div>
+                            <p>
+                                <span style="color: black;">Member Type: </span>
+                                <label>
+                                    <input name="bag1" type="radio" value="civilian" checked />
+                                    <span>Civilian</span>
+                                </label>
+                                <label>
+                                    <input name="bag1" type="radio" value="member" />
+                                    <span>Guild Member</span>
+                                </label>
+                            </p>
+                            <p>
+                                <span style="color: black;">Join Period: </span>
+                                <label>
+                                    <input name="bag2" type="radio" value="1month" checked />
+                                    <span>1-month</span>
+                                </label>
+                                <label>
+                                    <input name="bag2" value="3months" type="radio" />
+                                    <span>3-months</span>
+                                </label>
+                                <label>
+                                    <input name="bag2" value="halfyear" type="radio" />
+                                    <span>Half year</span>
+                                </label>
+                                <label>
+                                    <input name="bag2" value="year" type="radio" />
+                                    <span>Year</span>
+                                </label>
+                            </p>
+                            <Br>
+                            <div class="btn modal-trigger">
+                                <form method="post" enctype="multipart/form-data">
+                                    Upload KTP
+                                    <input type="file" name="fileToUpload" id="fileToUpload">
+                                </form>
+                            </div>
+                            <br>
+                            <div class="input-field col s12 m5">
+                                <label>Member Type</label>
+                                <br>
+                                <br>
+                                <select class="browser-default">
+                                    <option value="1">Civilian</option>
+                                    <option value="2">Manager</option>
+                                    <option value="3">Guild Member</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s12 m5">
+                                <label>Join period</label>
+                                <br>
+                                <br>
+                                <select class="browser-default">
+                                    <option value="1">1-month</option>
+                                    <option value="2">3-month</option>
+                                    <option value="3">6 month</option>
+                                </select>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            </br>
+                            <div class="input-field">
+                                <input type="text">
+                                <label>Profession</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text">
+                                <label>Skillset</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text">
+                                <label>Address</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text">
+                                <label>Birthdate</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text">
+                                <label>Code Name</label>
+                            </div>
+                            <input class="red" type="submit" value="Submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>
